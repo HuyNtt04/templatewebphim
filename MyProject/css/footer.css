@@ -1,0 +1,140 @@
+.footer-container {
+    margin-top: 50px; /* Giảm khoảng cách trên phù hợp với trang chi tiết phim */
+    background-color: #161923;
+    color: #fff;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #2a2d35;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    background-color: #3a3d45;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ccc;
+}
+
+.footer-description {
+    color: #888;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 1200px;
+}
+
+.footer-copyright {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        margin-top: 30px;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .social-icons {
+        margin-left: 0;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .footer-logo {
+        font-size: 28px;
+    }
+    
+    .footer-description {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+/* Các style dành cho Categories (nếu cần thiết cho giao diện chung) */
+.categories-section {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.category-item {
+    padding: 30px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.category-item:hover {
+    transform: translateY(-5px);
+}

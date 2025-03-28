@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoPhim - Phim hay có rồi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid px-4">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="/api/placeholder/120/40" alt="ROPHIM" class="logo">
+            </a>
+
+            <!-- Search Box -->
+            <div class="navbar-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="form-control search-input" placeholder="Tìm kiếm phim, diễn viên">
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navbar-links">
+                <a href="chude.html" class="nav-link">Chủ Đề</a>
+                <a href="#" class="nav-link">Duyệt tìm</a>
+                <a href="danhmucphim.html" class="nav-link">Phim Lẻ</a>
+                <a href="#" class="nav-link">Phim Bộ</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">
+                        Quốc gia <i class="fas fa-chevron-down ms-1"></i>
+                    </a>
+                </div>
+                <a href="subcription.html" class="nav-link">PREMIUM</a>
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="auth-buttons">
+                <a href="login.html">
+                    <button class="btn btn-outline-light me-2">Thành viên</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rest of the content remains the same -->
+    <main class="container-fluid p-0">
+        <!-- Hero Section -->
+        <div class="hero-section position-relative">
+            <div class="hero-content">
+                <h1 class="movie-title"></h1>
+                <div class="movie-meta"></div>
+                <div class="movie-genres mt-2"></div>
+                <p class="movie-description mt-3"></p>
+                <div class="action-buttons mt-4">
+                    <button class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-play me-2"></i>Xem phim
+                    </button>
+                    <button class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-heart me-2"></i>Yêu thích
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnail Slider -->
+        <div class="thumbnail-slider">
+            <div class="thumbnail-container" id="thumbnailContainer"></div>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories-section mt-4">
+            <h3 class="text-white mb-3 ps-4">Bạn đang quan tâm gì?</h3>
+            <div class="category-grid">
+                <div class="category-item" style="background-color: #E91E63;">Marvel</div>
+                <div class="category-item" style="background-color: #9C27B0;">Phù Thủy</div>
+                <div class="category-item" style="background-color: #4CAF50;">Sitcom</div>
+                <div class="category-item" style="background-color: #673AB7;">Lồng Tiếng</div>
+                <div class="category-item" style="background-color: #795548;">Xuyên Không</div>
+            </div>
+        </div>
+
+        <div class="outer-container-s3">
+            <div class="main-container-s3">
+                <div class="slider-container-s3">
+                    <!-- Korean Movies -->
+                    <div class="category-row-s3">
+                        <div class="category-header-s3">
+                            <h2 class="category-title-s3 korean">Phim Hàn Quốc mới</h2>
+                            <a href="#" class="see-all-s3">Xem toàn bộ ›</a>
+                        </div>
+                        <div class="movies-row-s3">
+                            <button class="nav-button-s3 prev-btn-s3">❮</button>
+                            <div class="movie-container-s3" id="korean-movies-s3"></div>
+                            <button class="nav-button-s3 next-btn-s3">❯</button>
+                        </div>
+                    </div>
+    
+                    <!-- Chinese Movies -->
+                    <div class="category-row-s3">
+                        <div class="category-header-s3">
+                            <h2 class="category-title-s3 chinese">Phim Trung Quốc mới</h2>
+                            <a href="#" class="see-all-s3">Xem toàn bộ ›</a>
+                        </div>
+                        <div class="movies-row-s3">
+                            <button class="nav-button-s3 prev-btn-s3">❮</button>
+                            <div class="movie-container-s3" id="chinese-movies-s3"></div>
+                            <button class="nav-button-s3 next-btn-s3">❯</button>
+                        </div>
+                    </div>
+    
+                    <!-- Thai Movies -->
+                    <div class="category-row-s3">
+                        <div class="category-header-s3">
+                            <h2 class="category-title-s3 thai">Phim Thái Lan mới</h2>
+                            <a href="#" class="see-all-s3">Xem toàn bộ ›</a>
+                        </div>
+                        <div class="movies-row-s3">
+                            <button class="nav-button-s3 prev-btn-s3">❮</button>
+                            <div class="movie-container-s3" id="thai-movies-s3"></div>
+                            <button class="nav-button-s3 next-btn-s3">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Movie Sections -->
+<div class="movie-sections">
+    <!-- Trending Movies Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h3 class="text-white">Phim Diễn Ảnh Mới Công Chiếu</h3>
+            <div class="section-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="movie-carousel">
+            <div class="movie-list" data-section="new-releases"></div>
+        </div>
+    </div>
+
+    <!-- Top 10 Section -->
+    <div class="movie-section top-10-section">
+    <div class="section-header">
+        <h3 class="text-white">Top 10 trong ngày</h3>
+        <div class="section-nav">
+            <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <div class="movie-carousel">
+        <div class="movie-list" data-section="top-10">
+            <!-- Add movie cards dynamically using JS -->
+        </div>
+    </div>
+</div>
+
+    <!-- Watch with Family Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h3 class="text-white">Mãn Nhãn với Phim Chiếu Rạp</h3>
+            <div class="section-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="movie-carousel">
+            <div class="movie-list" data-section="new-releases"></div>
+        </div>
+    </div>
+
+    <!-- K-Drama 2024 Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h3 class="text-white">Nhìn Lại 2024: K-Drama Đã Sắc</h3>
+            <div class="section-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="movie-carousel">
+            <div class="movie-list" data-section="new-releases"></div>
+        </div>
+    </div>
+
+    <!-- Themed K-Drama Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h3 class="text-white">Nhìn Lại 2024: C-Drama Chuyện Thế Lên Ngôi</h3>
+            <div class="section-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="movie-carousel">
+            <div class="movie-list" data-section="new-releases"></div>
+        </div>
+    </div>
+<!-- Theater Movies 2024 Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h3 class="text-white">Nhìn Lại 2024: Phim Chiếu Rạp Gánh Tạc 2024</h3>
+            <div class="section-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="movie-slider-2">
+            <!-- Hero Section -->
+            <div class="movie-hero-2">
+                <div class="background-image-2"></div>
+        <!-- Poster Hero -->
+        <img id="heroImage2" src="/api/placeholder/1200/400" alt="Movie Hero">
+        <div class="movie-hero-overlay-2"></div>
+        <div class="movie-info-2">
+            <h1 id="movieTitle2">Movie Title</h1>
+            <div class="badges-2 mb-2">
+                <span class="movie-badge-2 badge-imdb-2">IMDb 8.3</span>
+                <span class="movie-badge-2 badge-rating-2">T18</span>
+                <span class="movie-badge-2 badge-rating-2">2024</span>
+                <span class="movie-badge-2 badge-rating-2">Phần 1</span>
+                <span class="movie-badge-2 badge-rating-2">Tập 4</span>
+            </div>
+            <div class="genres-2 mb-2">
+                <span class="genre-tag-2">Action</span>
+                <span class="genre-tag-2">Drama</span>
+                <span class="genre-tag-2">Thriller</span>
+            </div>
+            <p id="movieDescription2" class="movie-description-2">
+                Movie description goes here.
+            </p>
+            <div class="buttons-2">
+                <button class="btn-play-2 me-2">Play</button>
+                <button class="btn-action-2 me-2">Favorite</button>
+                <button class="btn-action-2">Info</button>
+            </div>
+        </div>
+    </div>
+    
+            <!-- Thumbnail Gallery -->
+            <div class="thumbnail-gallery-2">
+                <div class="gallery-controls-2">
+                    <button class="prev-2" onclick="scrollGallery2('prev')">&#10094;</button>
+                    <button class="next-2" onclick="scrollGallery2('next')">&#10095;</button>
+                </div>
+                <div class="thumbnail-container-2" id="thumbnailContainer2">
+                    <!-- Thumbnails will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="movie-section">
+            <div class="section-header">
+                <h3 class="text-white">Phim Diễn Ảnh Mới Công Chiếu</h3>
+                <div class="section-nav">
+                    <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="movie-carousel">
+                <div class="movie-list" data-section="new-releases"></div>
+                <div class="movie-section">
+                    <div class="section-header">
+                        <h3 class="text-white">Phim Diễn Ảnh Mới Công Chiếu</h3>
+                        <div class="section-nav">
+                            <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="movie-carousel">
+                        <div class="movie-list" data-section="new-releases"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="" alt="">
+                    <span>RoPhim</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-cookie"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Hỏi-Đáp</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            
+            <div class="footer-description">
+                Rophim.net – Phim hay cả rổ - Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng full HD. 
+                Kho phim mới không lỗ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như Việt Nam, Hàn Quốc, Trung Quốc, Thái 
+                Lan, Nhật Bản, Âu Mỹ... đa dạng thể loại. Khám phá nền tảng phim trực tuyến hay nhất 2024 chất lượng 4K!
+            </div>
+            
+            <div class="footer-copyright">
+                © 2024 RoPhim
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/data2.js"></script>
+    <script src="js/data3.js"></script>
+</body>
+</html>
