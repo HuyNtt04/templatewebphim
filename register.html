@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Interface</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <a href="index.html">
+    <button class="back-btn">Quay lại</button>
+  </a>
+
+  <div class="login-container">
+    <div class="login-header">
+      <h1>Đăng ký</h1>
+      <p>Đã có tài khoản? <a href="login.html" style="color: #ffd700;">Đăng nhập ngay</a></p>
+    </div>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <input type="text" placeholder="Tên người dùng" required />
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Nhập lại Email" required />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Mật khẩu" required />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Nhập lại mật khẩu" required />
+      </div>
+      <div class="form-group">
+        <input type="tel" placeholder="Số điện thoại" required />
+      </div>
+      <button type="submit" class="login-btn">Đăng ký</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Xử lý đăng ký ở đây (kiểm tra trùng email, mật khẩu, gửi dữ liệu,...)
+      console.log('Đăng ký thành công (giả lập)');
+    });
+  </script>
+</body>
+</html>

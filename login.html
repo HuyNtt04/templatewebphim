@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Interface</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <a href="index.html">
+    <button class="back-btn">Quay lại</button>
+    </a>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Đăng nhập</h1>
+            <p>Nếu bạn chưa có tài khoản, <a href="register.html" style="color: #ffd700;">đăng ký ngay</a></p>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Mật khẩu" required>
+            </div>
+            <button type="submit" class="login-btn">Đăng nhập</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Quên mật khẩu?</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your login logic here
+            console.log('Login attempted');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            // Add your close logic here
+            console.log('Close button clicked');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phim lẻ - ROPhim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-[#0e0f1a] text-white font-sans">
+
+  <!-- Navbar (reused from chủ đề layout) -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0f1a] shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
+            <div class="leading-tight">
+              <h1 class="text-xl font-bold text-yellow-600">GO Film</h1>
+              <p class="text-xs text-gray-400">Phim hay cá rổ</p>
+            </div>
+          </a>
+      <div class="flex-1 mx-6">
+        <div class="flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/10 focus-within:ring-2 focus-within:ring-yellow-400">
+          <input type="text" placeholder="Tìm kiếm phim, diễn viên" class="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-sm" />
+          <i class="fas fa-search text-gray-300 ml-2"></i>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center space-x-6 text-sm">
+        <a href="#" class="hover:text-yellow-400">Chủ Đề</a>
+        <a href="#" class="hover:text-yellow-400">Duyệt phim</a>
+        <a href="#" class="hover:text-yellow-400 font-semibold">Phim lẻ</a>
+        <a href="#" class="hover:text-yellow-400">Phim bộ</a>
+        <a href="#" class="hover:text-yellow-400">Quốc gia</a>
+        <a href="#" class="text-yellow-400 font-bold">PREMIUM+</a>
+      </nav>
+      <div class="ml-4">
+        <button onclick="window.location.href='login.html'" class="flex items-center px-4 py-2 bg-white text-black rounded-full hover:bg-gray-100 transition">
+          <i class="fas fa-user mr-2"></i>
+          <span>Thành viên</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="pt-28 max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">Phim lẻ</h2>
+      <button class="text-sm flex items-center gap-2 text-white hover:text-yellow-400">
+        <i class="fas fa-filter"></i>
+        Bộ lọc
+      </button>
+    </div>
+
+    <div id="movieList" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+      <!-- Movie cards will be injected here -->
+    </div>
+  </main>
+
+  <footer class="mt-10 pt-6 bg-[#0f0f1a] text-white text-sm px-4 py-8">
+    <div class="max-w-screen-xl mx-auto space-y-6">
+  
+      <!-- Logo & Social -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full" />
+          <div class="text-xl font-bold">Ro<span class="text-yellow-400">Phim</span></div>
+          <span class="text-white/60 text-sm">Phim hay cả rổ</span>
+        </div>
+        <div class="flex gap-3 text-white/70">
+          <a href="#"><i class="fab fa-telegram-plane text-lg"></i></a>
+          <a href="#"><i class="fab fa-facebook-f text-lg"></i></a>
+          <a href="#"><i class="fab fa-tiktok text-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube text-lg"></i></a>
+          <a href="#"><i class="fab fa-discord text-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram text-lg"></i></a>
+        </div>
+      </div>
+  
+      <!-- Menu -->
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-white/70">
+        <a href="#" class="hover:text-white transition">Hỏi-Đáp</a>
+        <a href="#" class="hover:text-white transition">Chính sách bảo mật</a>
+        <a href="#" class="hover:text-white transition">Điều khoản sử dụng</a>
+        <a href="#" class="hover:text-white transition">Giới thiệu</a>
+        <a href="#" class="hover:text-white transition">Liên hệ</a>
+      </div>
+  
+      <!-- Danh mục -->
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-white/70">
+        <a href="#" class="hover:text-yellow-400">Dongphim</a>
+        <a href="#" class="hover:text-yellow-400">Ghienphim</a>
+        <a href="#" class="hover:text-yellow-400">Motphim</a>
+        <a href="#" class="hover:text-yellow-400">Subnhanh</a>
+      </div>
+  
+      <!-- Mô tả -->
+      <div class="text-white/60 leading-relaxed text-[15px]">
+        RoPhim – Phim hay cả rổ – Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng full HD.
+        Kho phim mới khổng lồ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như Việt Nam, Hàn Quốc, Trung Quốc, Thái Lan,
+        Nhật Bản, Âu Mỹ… đa dạng thể loại. Khám phá nền tảng phim trực tuyến hay nhất 2024 chất lượng 4K!
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-white/40 text-xs mt-4">© 2024 RoPhim</div>
+  
+    </div>
+  </footer>
+
+  <script src="js/grid.js"></script>
+
+</body>
+</html>

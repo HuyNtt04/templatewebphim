@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daredevil Tái Xuất - ROPhim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .tab-active {
+      @apply border-b-2 border-yellow-400 text-yellow-400;
+    }
+  </style>
+</head>
+<body class="bg-[#0e0f1a] text-white font-sans">
+  <!-- Navbar giữ nguyên -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0f1a] shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
+            <div class="leading-tight">
+              <h1 class="text-xl font-bold text-yellow-600">GO Film</h1>
+              <p class="text-xs text-gray-400">Phim hay cá rổ</p>
+            </div>
+          </a>
+      <div class="flex-1 mx-6">
+        <div class="flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/10 focus-within:ring-2 focus-within:ring-yellow-400">
+          <input type="text" placeholder="Tìm kiếm phim, diễn viên" class="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-sm" />
+          <i class="fas fa-search text-gray-300 ml-2"></i>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center space-x-6 text-sm">
+        <a href="#" class="hover:text-yellow-400">Chủ Đề</a>
+        <a href="#" class="hover:text-yellow-400">Phim lẻ</a>
+        <a href="#" class="hover:text-yellow-400">Phim bộ</a>
+        <a href="#" class="hover:text-yellow-400">Quốc gia</a>
+        <a href="#" class="text-yellow-400 font-bold">PREMIUM+</a>
+      </nav>
+      <div class="ml-4">
+        <button onclick="window.location.href='login.html'" class="flex items-center px-4 py-2 bg-white text-black rounded-full hover:bg-gray-100 transition">
+          <i class="fas fa-user mr-2"></i>
+          <span>Thành viên</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-7xl mx-auto px-6">
+    <!-- Thông tin phim + Player -->
+    <div class="bg-white/5 rounded-xl p-6 md:flex gap-6 mb-10 shadow-inner">
+      <!-- Poster -->
+      <div class="md:w-1/4 flex-shrink-0">
+        <img src="images/poster9.webp" alt="Poster" class="rounded-lg w-full" />
+        <h2 class="text-xl font-bold mt-4">Daredevil: Tái Xuất</h2>
+        <p class="text-sm text-yellow-400">Daredevil: Born Again</p>
+        <div class="mt-2 flex flex-wrap gap-2 text-xs text-gray-300">
+          <span class="bg-yellow-400 text-black px-2 py-1 rounded">IMDb 8.7</span>
+          <span class="border px-2 py-1 rounded">T18</span>
+          <span class="border px-2 py-1 rounded">2025</span>
+          <span class="border px-2 py-1 rounded">Phần 1</span>
+          <span class="border px-2 py-1 rounded">Tập 6</span>
+        </div>
+        <p class="text-sm text-gray-400 mt-3">Đã chiếu: 6 / 9 tập</p>
+        <!-- Mô tả phim -->
+        <div class="mt-4 text-sm text-gray-300">
+          <h3 class="font-semibold text-white mb-1">Giới thiệu:</h3>
+          <p>
+            Matt Murdock, một luật sư mù với khả năng đặc biệt, chiến đấu cho công lý thông qua công ty luật sầm uất của mình. Trong khi cựu trùm mafia Wilson Fisk theo đuổi những nỗ lực chính trị của riêng mình ở New York, khi quá khứ của họ bất đầu lộ diện, cả hai người đều thấy mình trên con đường va chạm không thể tránh khỏi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Player + Controls -->
+      <div class="md:w-3/4 mt-6 md:mt-0">
+        <iframe
+  class="w-full aspect-video rounded-lg shadow"
+  src="https://www.youtube.com/embed/?v=YKW-GdM-JIw&t=15s"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+        <div class="flex gap-4 mt-4 flex-wrap">
+          <button class="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300"><i class="fas fa-play mr-2"></i>Xem Ngay</button>
+          <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-heart mr-2"></i>Yêu thích</button>
+          <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-bookmark mr-2"></i>Thêm vào</button>
+          <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-share-alt mr-2"></i>Chia sẻ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="border-b border-white/10 mb-6">
+      <div class="flex space-x-6 text-sm font-semibold">
+        <button onclick="showTab('episodes')" id="tab-episodes" class="py-2 border-b-2 border-yellow-400 text-yellow-400">Tập phim</button>
+        <button onclick="showTab('cast')" id="tab-cast" class="py-2 text-gray-300 hover:text-white">Diễn viên</button>
+        <button onclick="showTab('recommend')" id="tab-recommend" class="py-2 text-gray-300 hover:text-white">Đề xuất</button>
+      </div>
+    </div>
+
+    <!-- Nội dung tab -->
+    <div id="tabContent">
+      <div id="episodesTab">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="episodeList"></div>
+      </div>
+      <div id="castTab" class="hidden">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="castList"></div>
+      </div>
+      <div id="recommendTab" class="hidden">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4" id="recommendList"></div>
+      </div>
+    </div>
+
+    <!-- Bình luận -->
+    <div class="mt-12">
+      <h3 class="text-xl font-semibold mb-4">Bình luận</h3>
+      <div class="bg-white/5 p-4 rounded-lg text-sm text-gray-300">
+        <p class="italic">Tính năng bình luận đang phát triển. Hãy đăng nhập để chia sẻ cảm nghĩ của bạn!</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const movie = {
+      episodes: ["Tập 1", "Tập 2", "Tập 3", "Tập 4", "Tập 5", "Tập 6"],
+      cast: ["Matt Murdock", "Wilson Fisk", "Karen Page", "Foggy Nelson"],
+      recommend: [
+        { title: "Daredevil", poster: "images/TOP1.webp" },
+        { title: "Chuyện Hàng Phim",  poster: "images/TOP1.webp" },
+        { title: "Một Gia Đình Kiểu Mỹ",  poster: "images/TOP1.webp" },
+        { title: "Vương Quyền David",  poster: "images/TOP1.webp" },
+        { title: "Sóng Dài Sáng Tỏ",  poster: "images/TOP1.webp" },
+        { title: "Cửa Tiệm Giang Hồ",  poster: "images/TOP1.webp" },
+        { title: "Án mạng ở Tòa Bạch Ốc",  poster: "images/TOP1.webp"},
+        { title: "Biến Cố Tuổi Teen", poster: "images/TOP1.webp" },
+        { title: "Mật Cười", poster: "images/TOP1.webp" },
+        { title: "Nhiệm Vụ Bên Lề",  poster: "images/TOP1.webp" },
+      ]
+    };
+
+    movie.episodes.forEach(ep => {
+      const el = document.createElement("button");
+      el.className = "bg-white/10 hover:bg-yellow-400 hover:text-black transition text-sm px-4 py-2 rounded";
+      el.innerText = ep;
+      document.getElementById("episodeList").appendChild(el);
+    });
+
+    movie.cast.forEach(name => {
+      const el = document.createElement("div");
+      el.className = "bg-white/5 p-4 rounded text-center";
+      el.innerHTML = `<i class='fas fa-user-circle text-3xl mb-2'></i><div class='text-sm'>${name}</div>`;
+      document.getElementById("castList").appendChild(el);
+    });
+
+    movie.recommend.forEach(film => {
+      const el = document.createElement("div");
+      el.className = "bg-white/5 p-2 rounded hover:bg-white/10 transition text-center text-sm";
+      el.innerHTML = `<img src='${film.poster}' class='rounded mb-2 w-full aspect-[2/3] object-cover'><div>${film.title}</div>`;
+      document.getElementById("recommendList").appendChild(el);
+    });
+
+    function showTab(tab) {
+      ["episodes", "cast", "recommend"].forEach(id => {
+        document.getElementById(`${id}Tab`).classList.add("hidden");
+        document.getElementById(`tab-${id}`).classList.remove("border-b-2", "border-yellow-400", "text-yellow-400");
+        document.getElementById(`tab-${id}`).classList.add("text-gray-300");
+      });
+      document.getElementById(`${tab}Tab`).classList.remove("hidden");
+      document.getElementById(`tab-${tab}`).classList.add("border-b-2", "border-yellow-400", "text-yellow-400");
+    }
+  </script>
+</body>
+</html>

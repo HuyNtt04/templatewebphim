@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROPhim Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0e0f1a] text-white font-sans">
+
+    <!-- ✅ Transparent Fixed Navbar -->
+    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
+          <div class="leading-tight">
+            <h1 class="text-xl font-bold text-yellow-600">GO Film</h1>
+            <p class="text-xs text-gray-400">Phim hay cá rổ</p>
+          </div>
+        </a>
+
+        <!-- Search -->
+      <!-- Container chung -->
+<div class="flex items-center justify-start space-x-8 flex-1 mx-4">
+  
+  <!-- Search -->
+  <div class="w-96">
+    <div class="flex items-center px-4 py-2 rounded-full text-sm bg-white/10 backdrop-md text-white placeholder-gray-300 border border-white/10 focus-within:ring-1 focus-within:ring-yellow-400 hover:bg-white/20 transition">
+      <input
+        type="text"
+        placeholder="Tìm kiếm phim, diễn viên..."
+        class="flex-1 bg-transparent outline-none placeholder-gray-300 text-white"
+      />
+      <i class="fas fa-search text-gray-300 ml-2"></i>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex items-center text-sm hidden md:flex w-full">
+    <!-- Menu links -->
+    <div class="flex space-x-[20px]">
+      <a href="chude.html" class="hover:text-yellow-400">Chủ đề</a>
+      <a href="#" class="hover:text-yellow-400">Phim lẻ</a>
+      <a href="#" class="hover:text-yellow-400">Phim bộ</a>
+      <a href="#" class="hover:text-yellow-400">Quốc gia</a>
+      <a href="#" class="hover:text-white text-yellow-400 text-lg font-bold">PREMIUM+</a>
+    </div>
+  
+    <!-- Thành viên button -->
+    <div class="ml-auto">
+      <button onclick="window.location.href='login.html'" class="flex items-center px-4 py-2 bg-white text-black rounded-full hover:ring-1 hover:ring-white transition">
+        <i class="fas fa-user mr-2"></i>
+        <span>Thành viên</span>
+      </button>
+    </div>
+  </nav>
+  
+
+    </header>
+
+    <!-- ✅ Fullscreen Hero with Image + Overlay -->
+    <section class="relative h-screen w-full overflow-hidden">
+      <div id="slider" class="w-full h-full flex slider-container transition-all duration-500 ease-in-out">
+        
+        <!-- 🔹 Slide 1 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img src="images/thumbnail2.jpg"
+               class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+          <div class="relative z-20 max-w-6xl mx-auto h-full flex flex-col justify-center px-6">
+            <h1 class="text-5xl font-bold mb-4">DAREDEVIL: TÁI XUẤT</h1>
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="bg-yellow-400 text-black px-2 py-1 rounded text-sm font-medium">IMDb 8.8</span>
+              <span class="bg-white/10 border border-white/20 px-2 py-1 rounded text-sm">T18</span>
+              <span class="bg-white/10 border border-white/20 px-2 py-1 rounded text-sm">2025</span>
+            </div>
+            <p class="max-w-2xl text-gray-200 mb-6">
+              Matt Murdock, một luật sư mù với khả năng đặc biệt, chiến đấu cho công lý...
+            </p>
+            <div class="flex gap-4">
+              <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold">
+                <i class="fas fa-play mr-2"></i> Xem ngay
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- 🔹 Slide 2 -->
+        <div class="w-full h-full relative flex-shrink-0">
+          <img src="images/thumbnail3.jpg"
+               class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+          <div class="relative z-20 max-w-6xl mx-auto h-full flex flex-col justify-center px-6">
+            <h1 class="text-5xl font-bold mb-4">MICKEY 17</h1>
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="bg-yellow-400 text-black px-2 py-1 rounded text-sm font-medium">IMDb 7.1</span>
+              <span class="bg-white/10 border border-white/20 px-2 py-1 rounded text-sm">T16</span>
+              <span class="bg-white/10 border border-white/20 px-2 py-1 rounded text-sm">2025</span>
+            </div>
+            <p class="max-w-2xl text-gray-200 mb-6">
+              Mickey Barnes là "nhân viên thay thế" thực hiện nhiệm vụ trên hành tinh băng giá...
+            </p>
+            <div class="flex gap-4">
+              <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold">
+                <i class="fas fa-play mr-2"></i> Xem ngay
+              </button>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+      <!-- 🔘 Thumbnails -->
+<div class="absolute bottom-6 right-6 z-30 flex space-x-3">
+  <img onclick="goToSlide(0)" src="images/thumbnail2.jpg"
+       class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" />
+  <img onclick="goToSlide(1)" src="images/thumbnail3.jpg"
+       class="thumb w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition" />
+</div>
+    
+      <!-- 🔘 Slider Controls
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3">
+        <button onclick="prevSlide()" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white"></button>
+        <button onclick="nextSlide()" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white"></button>
+      </div> -->
+    </section>
+
+    <!-- Tags Section (Redesigned) -->
+<section class="py-6 px-6 max-w-7xl mx-auto">
+  <h3 class="text-xl font-semibold mb-4">Bạn đang quan tâm gì?</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    <div class="rounded-xl p-4 bg-gradient-to-br from-pink-600 to-rose-400 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Marvel</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+    <div class="rounded-xl p-4 bg-gradient-to-br from-purple-600 to-pink-400 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Phù Thủy</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+    <div class="rounded-xl p-4 bg-gradient-to-br from-emerald-400 to-rose-300 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Sitcom</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+    <div class="rounded-xl p-4 bg-gradient-to-br from-violet-400 to-pink-400 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Lồng Tiếng Cực Mạnh</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+    <div class="rounded-xl p-4 bg-gradient-to-br from-yellow-600 to-rose-300 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Xuyên Không</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+    <div class="rounded-xl p-4 bg-gradient-to-br from-yellow-300 to-pink-400 shadow hover:scale-105 transition">
+      <h4 class="font-bold text-white mb-1">Phim 9x</h4>
+      <a href="#" class="text-white text-sm opacity-80 hover:underline">
+        Xem chủ đề <i class="fas fa-chevron-right text-xs ml-1"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="w-full px-4 py-8  text-white">
+  <div class="max-w-screen-xl mx-auto">
+    <!-- Bordered Rounded Wrapper -->
+    <div class="rounded-2xl bg-[#1b1b1b] p-6 ring-2 ring-blue-500/40">
+      <div class="space-y-10" id="carouselContainer"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- 🔥 Hot Movies -->
+    <section class="w-full px-4 py-10 text-white">
+      <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Sôi nổi nhất -->
+        <div class="bg-[#1b1b1b] rounded-2xl p-4 border border-white/10">
+          <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-clapperboard text-yellow-400"></i>
+            Sôi nổi nhất
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">1.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Khi Chim Nhạn Trở Về</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">2.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Daredevil: Tái Xuất</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">3.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Nghề Bác Sĩ</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-pink-400">4.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Lưỡi Dao Hiểm Hóc</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-lime-400">5.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Khi Cuộc Đời Cho Bạn Quả Quýt</span></li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openStatsModal()"
+          class="inline-flex items-center gap-1 text-xs text-white/60 hover:text-white transition">
+         Xem thêm
+         <i class="fa-solid fa-chevron-right text-[10px]"></i>
+       </a>
+        </div>
+    
+        <!-- Yêu thích nhất -->
+        <div class="bg-[#1b1b1b] rounded-2xl p-4 border border-white/10">
+          <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-hand-holding-heart text-yellow-300"></i>
+            Yêu thích nhất
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">1.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Lưỡi Dao Hiểm Hóc</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">2.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Khi Cuộc Đời Cho Bạn Quả Quýt</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">3.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Daredevil: Tái Xuất</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">4.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Khó Dỗ Dành</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-green-400">5.</span> <img src="https://via.placeholder.com/28x40" class="w-7 h-10 rounded"/> <span>Na Tra 2: Ma Đồng Não Hải</span></li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openStatsModal()"
+   class="inline-flex items-center gap-1 text-xs text-white/60 hover:text-white transition">
+  Xem thêm
+  <i class="fa-solid fa-chevron-right text-[10px]"></i>
+</a>
+        </div>
+    
+        <!-- Thể loại hot -->
+        <div class="bg-[#1b1b1b] rounded-2xl p-4 border border-white/10">
+          <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-square-plus text-yellow-300"></i>
+            Thể loại hot
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">1.</span> <span class="px-2 py-0.5 rounded-full bg-pink-800 text-xs">Chính Kịch</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">2.</span> <span class="px-2 py-0.5 rounded-full bg-blue-500 text-xs">Tâm Lý</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">3.</span> <span class="px-2 py-0.5 rounded-full bg-purple-500 text-xs">Tình Cảm</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">4.</span> <span class="px-2 py-0.5 rounded-full bg-lime-500 text-xs">Lãng Mạn</span></li>
+            <li class="flex items-center gap-3 text-sm"><span class="text-gray-400">5.</span> <span class="px-2 py-0.5 rounded-full bg-yellow-700 text-xs">Hài</span></li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openStatsModal()"
+   class="inline-flex items-center gap-1 text-xs text-white/60 hover:text-white transition">
+  Xem thêm
+  <i class="fa-solid fa-chevron-right text-[10px]"></i>
+</a>
+        </div>
+      </div>
+    </section>
+    <!-- Modal backdrop -->
+    <div id="statsModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
+  <!-- Modal box -->
+  <div class="bg-[#1b1b1b] text-white rounded-xl p-6 w-full max-w-md shadow-lg scale-95 transition-transform duration-300">
+    <button onclick="closeStatsModal()" class="absolute top-3 right-4 text-white text-xl hover:text-red-400">
+      &times;
+    </button>
+    <h2 class="text-xl font-bold mb-4">Top 10 Sôi Nổi Nhất</h2>
+    <ul id="modalContent" class="space-y-3 text-sm">
+      <!-- JS sẽ đổ nội dung vào đây -->
+    </ul>
+  </div>
+</div>
+
+<div class="relative">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold">Phim Điện Ảnh Mới Coóng</h2>
+    <button onclick="toggleExpand()" class="group rounded-full border border-yellow-400 text-yellow-400 px-3 py-1 text-sm hover:bg-yellow-400 hover:text-black transition-all flex items-center gap-1">
+      <span class="hidden sm:inline">Xem thêm</span>
+      <i class="fa-solid fa-chevron-right text-xs"></i>
+    </button>
+  </div>
+
+  <!-- Carousel wrapper -->
+  <div class="overflow-hidden">
+    <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
+      <!-- JS sẽ đổ 8+ phim vào đây -->
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <button id="prevBtn" onclick="prevSlide()" class="absolute left-0 top-[40%] bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hidden">
+    <i class="fa fa-chevron-left"></i>
+  </button>
+  <button id="nextBtn" onclick="nextSlide()" class="absolute right-0 top-[40%] bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
+    <i class="fa fa-chevron-right"></i>
+  </button>
+</div>
+<section class="w-full px-4 py-8 bg-[#111] text-white">
+    <div class="max-w-screen-xl mx-auto">
+      <!-- Tabs -->
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold">Top 10</h2>
+        <div class="flex gap-2 text-sm">
+          <button onclick="switchTab('day')" id="tab-day" class="px-3 py-1 rounded-full border border-white/20 text-white/60 hover:text-white hover:border-white transition">Ngày</button>
+          <button onclick="switchTab('week')" id="tab-week" class="px-3 py-1 rounded-full border border-white/20 text-white/60 hover:text-white hover:border-white transition">Tuần</button>
+          <button onclick="switchTab('month')" id="tab-month" class="px-3 py-1 rounded-full border border-white/20 text-white/60 hover:text-white hover:border-white transition">Tháng</button>
+        </div>
+      </div>
+  
+      <!-- Carousel -->
+      <div class="relative">
+        <div class="overflow-hidden">
+          <div id="top10Track" class="flex transition-transform duration-500 ease-in-out"></div>
+        </div>
+  
+        <button onclick="prevTop10()" id="prevTop10" class="absolute left-0 top-[40%] bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hidden">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button onclick="nextTop10()" id="nextTop10" class="absolute right-0 top-[40%] bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full bg-[#111] text-white px-4 py-8">
+    <div class="max-w-screen-xl mx-auto">
+      <!-- Hero Slide -->
+      <div id="heroContainer" class="relative overflow-hidden rounded-2xl min-h-[400px] bg-black mb-8"></div>
+  
+      <!-- Sub Carousel Section -->
+      <div id="subCarousels" class="space-y-10"></div>
+    </div>
+  </section>
+    <footer class="mt-10 pt-6 bg-[#0f0f1a] text-white text-sm px-4 py-8">
+        <div class="max-w-screen-xl mx-auto space-y-6">
+      
+          <!-- Logo & Social -->
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div class="flex items-center gap-3">
+              <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full" />
+              <div class="text-xl font-bold">Ro<span class="text-yellow-400">Phim</span></div>
+              <span class="text-white/60 text-sm">Phim hay cả rổ</span>
+            </div>
+            <div class="flex gap-3 text-white/70">
+              <a href="#"><i class="fab fa-telegram-plane text-lg"></i></a>
+              <a href="#"><i class="fab fa-facebook-f text-lg"></i></a>
+              <a href="#"><i class="fab fa-tiktok text-lg"></i></a>
+              <a href="#"><i class="fab fa-youtube text-lg"></i></a>
+              <a href="#"><i class="fab fa-discord text-lg"></i></a>
+              <a href="#"><i class="fab fa-instagram text-lg"></i></a>
+            </div>
+          </div>
+      
+          <!-- Menu -->
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-white/70">
+            <a href="#" class="hover:text-white transition">Hỏi-Đáp</a>
+            <a href="#" class="hover:text-white transition">Chính sách bảo mật</a>
+            <a href="#" class="hover:text-white transition">Điều khoản sử dụng</a>
+            <a href="#" class="hover:text-white transition">Giới thiệu</a>
+            <a href="#" class="hover:text-white transition">Liên hệ</a>
+          </div>
+      
+          <!-- Danh mục -->
+          <div class="flex flex-wrap gap-x-4 gap-y-2 text-white/70">
+            <a href="#" class="hover:text-yellow-400">Dongphim</a>
+            <a href="#" class="hover:text-yellow-400">Ghienphim</a>
+            <a href="#" class="hover:text-yellow-400">Motphim</a>
+            <a href="#" class="hover:text-yellow-400">Subnhanh</a>
+          </div>
+      
+          <!-- Mô tả -->
+          <div class="text-white/60 leading-relaxed text-[15px]">
+            RoPhim – Phim hay cả rổ – Trang xem phim online chất lượng cao miễn phí Vietsub, thuyết minh, lồng tiếng full HD.
+            Kho phim mới khổng lồ, phim chiếu rạp, phim bộ, phim lẻ từ nhiều quốc gia như Việt Nam, Hàn Quốc, Trung Quốc, Thái Lan,
+            Nhật Bản, Âu Mỹ… đa dạng thể loại. Khám phá nền tảng phim trực tuyến hay nhất 2024 chất lượng 4K!
+          </div>
+      
+          <!-- Copyright -->
+          <div class="text-white/40 text-xs mt-4">© 2024 RoPhim</div>
+      
+        </div>
+      </footer>
+
+  
+  
+
+    <!-- ✅ Script for scroll behavior -->
+    <Script type="module" src="js/slider.js"></Script>
+    <Script src="js/data.js" defer></Script>
+    <Script src="js/datafilm.js" defer></Script>
+    <Script src="js/datatop.js" defer></Script>
+    <Script src="js/Herodata.js"defer></Script>
+    <script>
+      const statsData = [
+      { title: "Khi Chim Nhạn Trở Về", img: "images/poster9.webp" },
+      { title: "Daredevil: Tái Xuất", img: "images/poster9.webp" },
+        "Nghề Bác Sĩ",
+        "Lưỡi Dao Hiểm Hóc",
+        "Khi Cuộc Đời Cho Bạn Quả Quýt",
+        "Biệt Đội Báo Thù",
+        "Giấc Mơ Xanh",
+        "Cuộc Đua Không Lối Thoát",
+        "Thời Gian Tăm Tối",
+        "Cuộc Gọi Lúc Nửa Đêm"
+      ];
+    
+      function openStatsModal() {
+  const modal = document.getElementById("statsModal");
+  const content = document.getElementById("modalContent");
+  content.innerHTML = "";
+
+  statsData.forEach(({ title, img }, index) => {
+    const li = document.createElement("li");
+    li.className = "flex items-center gap-3 text-sm";
+
+    li.innerHTML = `
+  <span class="text-green-400 min-w-[1.5rem] text-right block">${index + 1}.</span>
+  <img src="${img}" class="w-7 h-10 rounded" />
+  <span>${title}</span>
+`;
+
+
+    content.appendChild(li);
+  });
+
+  // hiệu ứng mở
+  modal.classList.remove("hidden");
+  modal.classList.remove("opacity-0", "pointer-events-none");
+  modal.classList.add("opacity-100");
+}
+    
+function closeStatsModal() {
+  const modal = document.getElementById("statsModal");
+  modal.classList.add("opacity-0", "pointer-events-none");
+  modal.classList.remove("opacity-100");
+}
+function closeStatsModal() {
+  const modal = document.getElementById("statsModal");
+  modal.classList.add("opacity-0", "pointer-events-none");
+  modal.classList.remove("opacity-100");
+
+  const box = modal.querySelector("div");
+  box.classList.add("scale-95");
+  box.classList.remove("scale-100");
+}
+    </script>
+
+  </body>
+</html>
