@@ -13,7 +13,7 @@
   </style>
 </head>
 <body class="bg-[#0e0f1a] text-white font-sans">
-  <!-- Navbar giữ nguyên -->
+
   <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0f1a] shadow">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
@@ -45,7 +45,7 @@
   </header>
 
   <main class="pt-28 max-w-7xl mx-auto px-6">
-    <!-- Thông tin phim + Player -->
+
     <div class="bg-white/5 rounded-xl p-6 md:flex gap-6 mb-10 shadow-inner">
       <!-- Poster -->
       <div class="md:w-1/4 flex-shrink-0">
@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <!-- Player + Controls -->
+
       <div class="md:w-3/4 mt-6 md:mt-0">
         <iframe
   class="w-full aspect-video rounded-lg shadow"
@@ -78,7 +78,9 @@
   allowfullscreen
 ></iframe>
         <div class="flex gap-4 mt-4 flex-wrap">
-          <button class="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300"><i class="fas fa-play mr-2"></i>Xem Ngay</button>
+          <a href="watchpage.html" class="inline-flex items-center bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
+            <i class="fas fa-play mr-2"></i> Xem ngay
+          </a>          
           <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-heart mr-2"></i>Yêu thích</button>
           <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-bookmark mr-2"></i>Thêm vào</button>
           <button class="bg-white/10 text-white px-4 py-2 rounded-full hover:bg-white/20"><i class="fas fa-share-alt mr-2"></i>Chia sẻ</button>
@@ -95,7 +97,7 @@
       </div>
     </div>
 
-    <!-- Nội dung tab -->
+
     <div id="tabContent">
       <div id="episodesTab">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="episodeList"></div>

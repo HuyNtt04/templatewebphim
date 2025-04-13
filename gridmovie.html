@@ -46,14 +46,83 @@
   <main class="pt-28 max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-bold">Phim lẻ</h2>
-      <button class="text-sm flex items-center gap-2 text-white hover:text-yellow-400">
+      <button id="openFilterBtn" class="text-sm flex items-center gap-2 text-white hover:text-yellow-400">
         <i class="fas fa-filter"></i>
         Bộ lọc
       </button>
     </div>
+    <div id="filterContainer"></div>
 
     <div id="movieList" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-      <!-- Movie cards will be injected here -->
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Cuộc Chơi Mạo Hiểm" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Cuộc Chơi Mạo Hiểm</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+    
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Bản Danh Sách Cuộc Đời" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Bản Danh Sách Cuộc Đời</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+    
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Bí Ẩn Thị Trấn Holland" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Bí Ẩn Thị Trấn Holland</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+    
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Huyết Ân Truy Hạnh" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Huyết Ân Truy Hạnh</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+    
+      <!-- ... tiếp tục tương tự cho các bộ phim còn lại ... -->
+    
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Canh Bạc Cuối Cùng" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Canh Bạc Cuối Cùng</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Canh Bạc Cuối Cùng" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Canh Bạc Cuối Cùng</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Canh Bạc Cuối Cùng" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Canh Bạc Cuối Cùng</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Canh Bạc Cuối Cùng" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Canh Bạc Cuối Cùng</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
+      <div class="bg-white/5 rounded-md overflow-hidden shadow hover:scale-[1.02] transition duration-200">
+        <img src="images/TOP1.webp" alt="Canh Bạc Cuối Cùng" class="w-full h-60 object-cover">
+        <div class="p-3">
+          <p class="text-sm font-semibold">Canh Bạc Cuối Cùng</p>
+          <span class="inline-block mt-2 px-2 py-0.5 text-xs bg-white/10 rounded text-white">P.Đ.B</span>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -107,7 +176,8 @@
     </div>
   </footer>
 
-  <script src="js/grid.js"></script>
+  <!-- <script src="js/grid.js"></script> -->
+  <Script src="filter-popup/filter.js"></Script>
 
 </body>
 </html>

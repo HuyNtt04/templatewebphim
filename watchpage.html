@@ -8,22 +8,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="bg-[#0e0f1a] text-white font-sans">
-  <!-- Navbar giữ nguyên -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0f1a] shadow">
+
+  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-80 backdrop-blur-md shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+
       <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
-        <img src="logo.png" alt="ROPhim" class="w-10 h-10" />
         <div class="leading-tight">
-          <h1 class="text-xl font-bold text-white">ROPhim</h1>
+          <h1 class="text-xl font-bold text-yellow-600">GO Film</h1>
           <p class="text-xs text-gray-400">Phim hay cá rổ</p>
         </div>
       </a>
+  
       <div class="flex-1 mx-6">
         <div class="flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/10 focus-within:ring-2 focus-within:ring-yellow-400">
           <input type="text" placeholder="Tìm kiếm phim, diễn viên" class="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-sm" />
           <i class="fas fa-search text-gray-300 ml-2"></i>
         </div>
       </div>
+  
+    
       <nav class="hidden lg:flex items-center space-x-6 text-sm">
         <a href="#" class="hover:text-yellow-400">Chủ Đề</a>
         <a href="#" class="hover:text-yellow-400">Phim lẻ</a>
@@ -31,31 +35,36 @@
         <a href="#" class="hover:text-yellow-400">Quốc gia</a>
         <a href="#" class="text-yellow-400 font-bold">PREMIUM+</a>
       </nav>
+  
+    
       <div class="ml-4">
         <button onclick="window.location.href='login.html'" class="flex items-center px-4 py-2 bg-white text-black rounded-full hover:bg-gray-100 transition">
           <i class="fas fa-user mr-2"></i>
           <span>Thành viên</span>
         </button>
       </div>
-    </div>
-  </header>
-
-  <main class="pt-24 max-w-7xl mx-auto px-4">
-    <!-- Video chính trung tâm -->
-    <div class="w-full aspect-video bg-black mb-8">
-        <iframe
-        src="https://embed.rophimtv.me/embed/iJ1uPUVI?ver=1&ss=1&ep=1"
-        width="100%"
-        height="500"
-        allowfullscreen
-        frameborder="0">
-      </iframe>
       
     </div>
+  </header>
+  
 
-    <!-- Dưới player -->
+  <main class="pt-24 pb-24 max-w-7xl mx-auto px-4">
+
+    <div style="position: relative; padding-top: 56.25%;">
+      <iframe 
+        src="https://drive.google.com/file/d/1sX4K3NaRh5BIsAgj9qgnQK1sz1TLxVQn/preview" 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 80%;"
+        allow="autoplay; encrypted-media" 
+        allowfullscreen 
+        frameborder="0">
+      </iframe>
+    </div>
+    
+    
+
+
     <div class="flex flex-col md:flex-row gap-6">
-      <!-- Bên trái: Poster + thông tin -->
+
       <div class="w-full md:w-3/4">
         <div class="flex gap-4 mb-6">
           <img src="images/poster9.webp" class="w-24 h-auto rounded-md" />
@@ -91,7 +100,7 @@
         </div>
       </div>
 
-      <!-- Bên phải: Diễn viên và gợi ý -->
+
       <div class="w-full md:w-1/4 flex flex-col gap-6">
         <!-- Diễn viên -->
         <div>
@@ -121,19 +130,143 @@
                 <span class="text-xs text-gray-400">P1 • Tập 8</span>
               </div>
             </div>
-            <!-- Thêm tối đa 5 mục -->
           </div>
         </div>
       </div>
     </div>
 
     <!-- Bình luận -->
-    <div class="mt-12 max-w-4xl mx-auto">
-      <h3 class="text-xl font-semibold mb-4">Bình luận</h3>
-      <div class="bg-white/5 p-4 rounded text-sm text-gray-300">
-        <p class="italic">Tính năng bình luận đang phát triển. Hãy đăng nhập để chia sẻ cảm nghĩ của bạn!</p>
+    <section class="mt-10 mb-20 px-4">
+      <!-- Đường line mờ ngăn cách -->
+      <div class="border-t border-gray-700 opacity-30 mb-8"></div>
+    
+      <!-- Container nhỏ gọn, căn trái -->
+      <div class="max-w-xl text-white">
+    
+        <!-- Tiêu đề & Tabs -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2 text-xl font-semibold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2h-2m-4 0H7a2 2 0 01-2-2v-7a2 2 0 012-2h6m0-4v4m0 0l-2-2m2 2l2-2" />
+            </svg>
+            Bình luận <span class="text-yellow-400">(5)</span>
+          </div>
+          <div class="space-x-2 text-sm">
+            <button class="px-3 py-1 rounded border text-white bg-white/10 border-white/20">Bình luận</button>
+            <button class="px-3 py-1 rounded border text-white border-white/20 hover:bg-white/10 transition">Đánh giá</button>
+          </div>
+        </div>
+    
+        <!-- Thông báo đăng nhập -->
+        <p class="text-sm text-gray-400 mb-4">Vui lòng <a href="#" class="text-yellow-400 hover:underline">đăng nhập</a> để tham gia bình luận.</p>
+    
+        <!-- Form bình luận -->
+        <div class="bg-[#1c1c1c] rounded-xl p-4 mb-6">
+          <textarea
+            class="w-full bg-transparent text-white resize-none placeholder-gray-500 border-none focus:ring-0"
+            placeholder="Viết bình luận" rows="4" maxlength="1000"></textarea>
+          <div class="flex justify-between items-center mt-2">
+            <label class="flex items-center gap-1 text-sm text-gray-400 cursor-pointer">
+              <input type="checkbox" class="form-checkbox text-yellow-400" />
+              Tiết lộ?
+            </label>
+            <div class="text-sm text-gray-500">0 / 1000</div>
+            <button class="flex items-center gap-1 text-yellow-400 font-semibold hover:text-yellow-300 transition">
+              Gửi <span>&#x279E;</span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- Danh sách bình luận -->
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <img src="https://i.pravatar.cc/40?img=32" class="w-10 h-10 rounded-full" />
+            <div class="flex-1">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <span class="font-semibold">hungg</span>
+                  <span class="text-yellow-400">∞</span>
+                  <span class="text-xs text-gray-400">4 ngày trước</span>
+                </div>
+                <span class="text-xs text-gray-500 bg-white/10 px-2 py-1 rounded">P.2 - Tập 1</span>
+              </div>
+              <p class="mt-1 text-gray-300">ra thêm cái giữ để tăng tốc đi ad :))</p>
+              <div class="flex items-center text-sm mt-2 text-gray-500 gap-4">
+                <button class="hover:underline">👍</button>
+                <button class="hover:underline">Trả lời</button>
+                <button class="hover:underline">... Thêm</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="flex gap-4 items-start">
+            <img src="https://i.pravatar.cc/40?img=18" class="w-10 h-10 rounded-full" />
+            <div class="flex-1">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <span class="font-semibold">shylily</span>
+                  <span class="text-yellow-400">∞</span>
+                  <span class="text-xs text-gray-400">5 ngày trước</span>
+                </div>
+                <span class="text-xs text-gray-500 bg-white/10 px-2 py-1 rounded">P.2 - Tập 1</span>
+              </div>
+              <p class="mt-1 text-gray-300">[Bình luận ẩn]</p>
+              <a href="#" class="text-yellow-400 text-sm hover:underline">Xem</a>
+              <div class="flex items-center text-sm mt-2 text-gray-500 gap-4">
+                <button class="hover:underline">👍</button>
+                <button class="hover:underline">Trả lời</button>
+                <button class="hover:underline">... Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    
   </main>
+  <footer class="mt-10 pt-6 bg-[#1b1b1f] text-white text-sm px-4 py-8">
+    <div class="max-w-screen-xl mx-auto space-y-6">
+  
+
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full" />
+          <div class="text-xl font-bold">Ro<span class="text-yellow-400">Phim</span></div>
+          <span class="text-white/60 text-sm">Phim hay cả rổ</span>
+        </div>
+        <div class="flex gap-3 text-white/70">
+          <a href="#"><i class="fab fa-telegram-plane text-lg"></i></a>
+          <a href="#"><i class="fab fa-facebook-f text-lg"></i></a>
+          <a href="#"><i class="fab fa-tiktok text-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube text-lg"></i></a>
+          <a href="#"><i class="fab fa-discord text-lg"></i></a>
+          <a href="#"><i class="fab fa-instagram text-lg"></i></a>
+        </div>
+      </div>
+  
+
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-white/70">
+        <a href="#" class="hover:text-white transition">Hỏi-Đáp</a>
+        <a href="#" class="hover:text-white transition">Chính sách bảo mật</a>
+        <a href="#" class="hover:text-white transition">Điều khoản sử dụng</a>
+        <a href="#" class="hover:text-white transition">Giới thiệu</a>
+        <a href="#" class="hover:text-white transition">Liên hệ</a>
+      </div>
+  
+
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-white/70">
+        <a href="#" class="hover:text-yellow-400">Dongphim</a>
+        <a href="#" class="hover:text-yellow-400">Ghienphim</a>
+        <a href="#" class="hover:text-yellow-400">Motphim</a>
+        <a href="#" class="hover:text-yellow-400">Subnhanh</a>
+      </div>
+  
+
+      <div class="text-white/40 text-xs mt-4">© 2024 RoPhim</div>
+  
+    </div>
+  </footer>
 </body>
 </html>
